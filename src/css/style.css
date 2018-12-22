@@ -97,7 +97,7 @@
 }
 
 .header .nav-link:hover {
-  color: #cccccc;
+  color: #ff5b97;
   cursor: pointer;
 }
 
@@ -107,12 +107,12 @@
 }
 
 .main-img {
+  width: 50%;
+  z-index: 0;
+  margin-left: 50%;
   position: absolute;
   top: 0;
-  left: 0;
-  max-width: 700px;
-  margin-top: -100px;
-  z-index: 0;
+  height: 100vh;
 }
 
 .main-title {
@@ -150,10 +150,14 @@
 
 /* SECOND */
 .second-img {
+  width: 50%;
+  z-index: 0;
+  margin-left: 0%;
   position: absolute;
-  margin-top: -18%;
   top: 0;
-  margin-left: -23%;
+  left: 0;
+  height: 100vh;
+  margin-top: 100vh;
 }
 
 .second-text {
@@ -162,12 +166,21 @@
 
 .second-subtitle {
   color: #e50938;
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 .second-title {
   font-size: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1199px) {
+  .main-title, .main-button {
+    margin-top: 30px;
+  }
+  .main-subtitle {
+    margin: 40px 0;
+  }
 }
 
 @media (max-width: 991px) {
@@ -182,7 +195,7 @@
     margin: 1rem auto;
   }
   .main-img {
-    max-width: 500px;
+    height: 100vh;
   }
   .main-title {
     font-size: 35px;
@@ -209,8 +222,11 @@
     display: inline-block;
   }
   .main-img {
-    margin-top: 80px;
-    max-width: 520px;
+    height: auto;
+    top: 100%;
+    right: 20%;
+    display: block;
+    width: 75vh;
   }
   .main-title {
     padding-top: 60px;
@@ -222,8 +238,8 @@
     padding-top: 100px;
   }
   .main-img {
-    max-width: 300px;
-    margin-left: 5%;
+    width: 75%;
+    top: 105%;
   }
 }
 

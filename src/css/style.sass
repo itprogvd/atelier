@@ -88,7 +88,7 @@ $text-color: #333333
     &-link
       padding-right: 50px
       &:hover
-        color: #cccccc
+        color: $main-color
         cursor: pointer
 
 
@@ -97,12 +97,13 @@ $text-color: #333333
 .main
   margin-bottom: 150px
   &-img
+    width: 50%
+    z-index: 0
+    margin-left: 50%
     position: absolute
     top: 0
-    left: 0
-    max-width: 700px
-    margin-top: -100px
-    z-index: 0
+    right: 
+    height: 100vh
   &-title
     color: $text-color
     +semibold()
@@ -133,18 +134,30 @@ $text-color: #333333
 /* SECOND */
 .second
   &-img
+    width: 50%
+    z-index: 0
+    margin-left: 0%
     position: absolute
-    margin-top: -18%
     top: 0
-    margin-left: -23%
+    left: 0 
+    height: 100vh
+    margin-top: 100vh
   &-text
     text-align: right
   &-subtitle
     color: #e50938
-    margin: 5rem 0
+    margin: 3rem 0
   &-title
     font-size: 30px
-    margin-bottom: 100px
+    margin-bottom: 50px
+
+
+@media (max-width: 1199px)
+  .main
+    &-title, &-button
+      margin-top: 30px
+    &-subtitle
+      margin: 40px 0
 
 @media (max-width: 991px)
   .header
@@ -158,7 +171,7 @@ $text-color: #333333
         margin: 1rem auto
   .main
     &-img
-      max-width: 500px
+      height: 100vh
     &-title
       font-size: 35px
       padding-top: 30px
@@ -180,8 +193,11 @@ $text-color: #333333
         display: inline-block
   .main
     &-img
-      margin-top: 80px
-      max-width: 520px
+      height: auto
+      top: 100%
+      right: 20%
+      display: block
+      width: 75vh
     &-title
       padding-top: 60px
 
@@ -190,8 +206,8 @@ $text-color: #333333
     &-title
       padding-top: 100px
     &-img
-      max-width: 300px
-      margin-left: 5%
+      width: 75%
+      top: 105%
 
 @media (max-width: 320px)
   .main
